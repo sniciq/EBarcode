@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">易解二维码</string>
+    <string name="dir_name">EBarcode</string>
+    <string name="action_settings">设置</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_result">解析结果</string>
+    <string name="title_activity_setting">设置</string>
+    <string name="welcome">欢迎使用易解二维码</string>
+    <string name="picSize">图片大小</string>
+    <string name="takePicPeriod">拍照速度(秒)</string>
+    <string name="btn_settings_OK">完成</string>
+    <string name="btn_settings_Cancel">取消</string>
+</resources>

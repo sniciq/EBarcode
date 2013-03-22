@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    tools:context=".MainActivity" >
+
+    <com.eddy.ebarcode.CameraView 
+        android:id="@+id/cameraView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        />
+     
+    <com.eddy.ebarcode.LocationAssistView 
+        android:id="@+id/locationAssistView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        />
+    
+    <!-- 
+    <ImageView 
+        android:src="@drawable/welcome"
+        android:contentDescription="@string/welcome"
+		android:layout_height="300dp"
+        android:layout_width="300dp"
+		android:layout_centerInParent="true"
+        />
+     -->
+    <!-- 
+    <Button 
+        android:id="@+id/testBtn"
+        android:text="@string/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:layout_alignBottom="@id/cameraView"
+        />
+ 	 -->
+</RelativeLayout>

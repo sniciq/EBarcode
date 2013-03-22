@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/btn_settings_OK"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/btn_settings_OK"/>
+
+    <item
+        android:id="@+id/btn_settings_Cancel"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/btn_settings_Cancel"/>
+</menu>
