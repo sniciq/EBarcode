@@ -30,7 +30,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.Toast;
 
-public class CameraView extends SurfaceView implements SurfaceHolder.Callback, Camera.PictureCallback, BarCodeDecodeOverListener {
+public class CameraView extends SurfaceView implements SurfaceHolder.Callback, BarCodeDecodeOverListener {
 	private SurfaceHolder holder;
 	private Camera myCamera;
 	private Context context;
@@ -213,51 +213,6 @@ public class CameraView extends SurfaceView implements SurfaceHolder.Callback, C
 		bitmap.compress(Bitmap.CompressFormat.PNG, 90, out);
 		galleryAddPic(imageF.getPath());
 		Toast.makeText(this.context, "Save Pic Successfully!", Toast.LENGTH_LONG).show();
-	}
-	
-	@Override
-	public void onPictureTaken(byte[] data, Camera camera) {
-		try {
-			
-			Log.i("AAAAAAAAAAAAACCC", "onPictureTaken");
-			
-			isProcessingPic = true;
-			Bitmap picture = BitmapFactory.decodeByteArray(data, 0, data.length);
-			camera.startPreview();
-			barCodeDecoder.decodeInThread(picture);
-			
-			
-//			//取中间区域
-//			int bw = picture.getWidth() / 2;
-//			int bh = picture.getHeight() / 2;
-//			int x = (picture.getWidth() - bw) / 2;
-//			int y = (picture.getHeight() - bh) /2;
-//			Bitmap nb = Bitmap.createBitmap(picture, x, y, bw, bh);
-			
-			
-//			
-//			ByteArrayOutputStream baos = new ByteArrayOutputStream();
-//			nb.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-//			baos.close();
-//			
-//			//FIXME savePicToGallery
-//			savePicToGallery(nb);
-//			Map<String, Object> decodeMap = barCodeDecoder.decode(nb);
-//			boolean success = (Boolean) decodeMap.get("result");
-//			if(success) {
-//				String info = (String) decodeMap.get("info");
-//				Intent intent = new Intent(this.context, ResultActivity.class);
-//				intent.putExtra("info", info);
-//				
-//				((Activity) this.context).startActivityForResult(intent, MainActivity.requestCode_barcode);
-//			}
-//			else {
-//				camera.startPreview();
-//			}
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
 	}
 	
 	public void pause() {

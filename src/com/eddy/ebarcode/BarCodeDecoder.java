@@ -126,8 +126,7 @@ public class BarCodeDecoder {
 
 		new Thread() {
 			public void run() {
-				Map<String, Object> decodeMap = BarCodeDecoder.this
-						.decode(picture);
+				Map<String, Object> decodeMap = BarCodeDecoder.this.decode(picture);
 				BarCodeDecoder.this.fireDecodeOver(decodeMap);
 			}
 		}.run();
